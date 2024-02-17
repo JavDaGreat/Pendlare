@@ -25,7 +25,7 @@ function ShowDep({ name, time, direction }) {
   const directionWithoutParentheses = direction.replace(/\(.*?\)/g, "");
 
   return (
-    <div className="py-4 px-4 bg-gray-300 ">
+    <div className="py-4 px-4 border-2 border-black flex justify-center items-center flex-col w-[300px] ">
       <h1>{addLine}</h1>
       <p> Mot : {directionWithoutParentheses}</p>
       <p className="font-bold"> {formattedDuration} </p>

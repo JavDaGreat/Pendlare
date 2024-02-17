@@ -6,7 +6,7 @@ function Home() {
     <div className=" h-screen w-screen flex justify-center items-center flex-col gap-6 ">
       <h3 className="text-center font-bold text-2xl">Pendlare</h3>
 
-      <div className=" h-[500px] w-[500px] bg-gray-500 flex justify-center items-center flex-col gap-8 rounded-md ">
+      <div className=" h-[500px] w-[500px] border-2 border-black  flex justify-center items-center flex-col gap-8 rounded-md ">
         <p>Hitta närmaste Hållplats</p>
         <button
           onClick={() => {
@@ -15,8 +15,7 @@ function Home() {
           className="rounded bg-black text-white h-[50px] w-[130px] ">
           Hitta
         </button>
-        <p className="text-center">__Eller__</p>
-        <p>Reseplaneraren</p>
+        <p>Planera din resa</p>
         <button
           onClick={() => {
             navigate("/reseplaneran");

@@ -40,7 +40,7 @@ function Reseplaneran() {
   });
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center flex-col gap-4">
+    <div className="min-h-screen w-screen flex justify-center items-center flex-col gap-4">
       <button
         className="rounded bg-black py-2 px-4 text-white my-8 "
         onClick={() => {
@@ -49,10 +49,10 @@ function Reseplaneran() {
         back
       </button>
       <h3 className="text-center font-bold text-2xl">Sök Din Resa</h3>
-      <div className="flex items-center justify-center flex-col gap-4 bg-gray-300 w-[500px] h-[500px]  rounded-md ">
+      <div className="flex items-center justify-center flex-col gap-4 border-2 border-black w-[500px] h-[500px]  rounded-md ">
         <label htmlFor="From">From:</label>
         <input
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[90%] p-3"
+          className=" border-2 border-black w-[90%] p-2 rounded-md hover:shadow-lg active:shadow-lg"
           type="text"
           id="From"
           value={orgin}
@@ -62,7 +62,7 @@ function Reseplaneran() {
         <label htmlFor="till">Till:</label>
         <input
           type="text"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[90%]"
+          className=" border-2 border-black w-[90%] p-2 rounded-md hover:shadow-lg active:shadow-lg"
           id="till"
           value={destination}
           onChange={(e) => handleChangeDestination(e.target.value)}
@@ -73,7 +73,9 @@ function Reseplaneran() {
           Sök
         </button>
       </div>
-      <div>{content}</div>
+      <div className=" max-w-lg flex justify-center items-center flex-wrap  gap-4">
+        {content}
+      </div>
     </div>
   );
 }
